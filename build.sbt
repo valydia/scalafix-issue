@@ -13,7 +13,7 @@ inThisBuild(
       )
     ),
     scalaVersion := V.scala212,
-    addCompilerPlugin(scalafixSemanticdb),
+    addCompilerPlugin("org.scalameta" % "semanticdb-scalac" % "4.2.3" cross CrossVersion.full),
     scalacOptions ++= List(
       "-Yrangepos",
       "-P:semanticdb:synthetics:on"
